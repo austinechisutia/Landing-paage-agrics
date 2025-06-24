@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/backgroundimage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    padding: 20px 40px;
+}
+header .logo-container {
+    display: flex;
+    align-items: center;
+    justify-self: start;
+}
+header .logo-container img {
+    height: 60px;
+    margin-right: 20px;
+}
+header .logo-container span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+nav {
+    justify-self: center;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin: 0 20px;
+}
+nav ul li:last-child {
+    margin-left: 0;
+    margin-right: 0;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #4CAF50;
+}
+nav a[href="#new"] {
+    background: #fff;
+    border-radius: 999px;
+    padding: 6px 32px;
+    box-shadow: 0 2px 8px #0001;
+    color: #333;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+nav a[href="#new"]:hover {
+    background: #f4f4f4;
+    color: #4CAF50;
+}
+header .contact-link {
+    justify-self: end;
+}
+header .contact-link a {
+    background: #000;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 16px 0 0 16px;
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+header .contact-link a:hover {
+    background: #333;
+    color: #fff;
+}
+#clock {
+    width: 220px;
+    height: 220px;
+    margin: 40px auto 0 auto;
+    position: relative;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    box-shadow: none;
+    border: 4px solid rgba(200,200,200,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clock-face {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.hand {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    background: #ccc;
+    transform-origin: bottom center;
+    border-radius: 6px;
+    opacity: 0.6;
+}
+.hour {
+    width: 8px;
+    height: 50px;
+    background: #eee;
+    z-index: 3;
+}
+.minute {
+    width: 6px;
+    height: 70px;
+    background: #ddd;
+    z-index: 2;
+}
+.second {
+    width: 3px;
+    height: 90px;
+    background: #bbb;
+    z-index: 1;
+}
+.tick {
+    position: absolute;
+    width: 4px;
+    height: 16px;
+    background: #e0e0e0;
+    left: 50%;
+    top: 4px;
+    transform-origin: 50% 100%;
+    border-radius: 2px;
+    opacity: 0.3;
+}
+.pointy-stick {
+    position: absolute;
+    width: 2px;
+    height: 36px;
+    background: linear-gradient(to top, #fff 60%, #bbb 100%);
+    left: 50%;
+    top: -6px;
+    transform-origin: 50% 100%;
+    border-radius: 1px;
+    opacity: 0.5;
+    z-index: 0;
+}
+#bubbles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.28;
+    background: radial-gradient(circle at 32% 32%, #fff 85%, #e0e0e0 92%, #bbb 100%),
+                radial-gradient(circle at 70% 70%, #bbb 10%, transparent 80%),
+                linear-gradient(145deg, #fff8 40%, #bbb3 100%);
+    box-shadow: 0 0 24px 4px #fff8, 0 0 40px 12px #fff2, inset 0 12px 32px #fff9, inset 0 -12px 32px #bbb7;
+    overflow: hidden;
+    border: 2px solid #fff6;
+    filter: drop-shadow(0 4px 16px #bbb8);
+}
+.bubble::after {
+    content: '';
+    position: absolute;
+    left: 14%;
+    top: 10%;
+    width: 48%;
+    height: 32%;
+    background: radial-gradient(circle, #fff 90%, transparent 100%);
+    opacity: 0.95;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(0.5px);
+    box-shadow: 0 0 16px 2px #fff8;
+}
+.bubble::before {
+    content: '';
+    position: absolute;
+    right: 18%;
+    bottom: 16%;
+    width: 18%;
+    height: 12%;
+    background: radial-gradient(circle, #fff8 80%, transparent 100%);
+    opacity: 0.5;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(1px);
+} 
