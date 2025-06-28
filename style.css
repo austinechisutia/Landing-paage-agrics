@@ -472,6 +472,8 @@ header .contact-link a:hover, header .contact-link a:focus {
     width: 22vw;
     max-width: 320px;
     min-width: 180px;
+    height: auto;
+    max-height: none;
     right: 2vw;
     bottom: 2vw;
     position: fixed;
@@ -491,8 +493,8 @@ header .contact-link a:hover, header .contact-link a:focus {
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-end;
+    padding-bottom: 0 !important;
 }
 .expert-chat-text:hover {
     background: rgba(0, 19, 47, 0.42);
@@ -525,4 +527,5 @@ header .contact-link a:hover, header .contact-link a:focus {
     margin-bottom: 0 !important;
     margin-top: 0 !important;
     object-fit: contain;
+    padding-bottom: 0 !important;
 } 
