@@ -6,28 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agriculture Landing Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <div id="bubbles"></div>
     <header>
+        <div class="header-cloudy-gradient"></div>
         <div class="logo-container">
             <img src="images/Logo.png" alt="Agronest Logo">
             <span>AGRONEST</span>
         </div>
         <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#product">Product</a></li>
-                <li><a href="#new">New</a></li>
-                <li><a href="#crops">Crops</a></li>
-                <li><a href="#blog">Blog</a></li>
+            <ul style="margin: 0; padding: 0; list-style: none; display: flex; gap: 1em;">
+            <li><a href="#about" style="color: #fff; text-decoration: none;"><i class="fas fa-leaf"></i> About</a></li>
+            <li><a href="#product" style="color: #fff; text-decoration: none;"><i class="fas fa-seedling"></i> Product</a></li>
+            <li><a href="#new" style="color: #00132f; text-decoration: none;"><i class="fas fa-star"></i> New</a></li>
+            <li><a href="#crops" style="color: #fff; text-decoration: none;"><i class="fas fa-tractor"></i> Crops</a></li>
+            <li><a href="#blog" style="color: #fff; text-decoration: none;"><i class="fas fa-blog"></i> Blog</a></li>
             </ul>
         </nav>
+        <style>
+            .logo-container span {
+            color: #00132f;
+            }
+        </style>
         <div class="contact-link">
             <a href="#contact">Contact</a>
         </div>
     </header>
+    <div class="hero-left">
+        <h1>
+            Driving Climate Action Through Nature Based Solution
+        </h1>
+        <a href="#get-started" class="hero-btn"><span>Get Started</span> <i class="fas fa-arrow-right"></i></a>
+        <div class="hero-socials">
+            <a href="#" class="social-icon" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    <div class="header-cloudy-gradient"></div>
     <div id="clock"></div>
+    <div class="expert-chat-text">
+        <div class="expert-chat-heading">Want to talk to an expert?</div>
+        <p class="expert-chat-desc">Our team is ready to help you with any questions or advice. Reach out and get expert support tailored to your needs, anytime you need assistance.</p>
+        <img src="images/farmer.png" alt="Farmer" class="expert-chat-img">
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -128,8 +128,29 @@ function animateBubbles() {
     requestAnimationFrame(animateBubbles);
 }
 
+function createHeaderClouds() {
+    const container = document.querySelector('.header-cloudy-gradient');
+    if (!container) return;
+    const cloudCount = 8 + Math.floor(Math.random() * 4); // 8-11 clouds
+    const headerHeight = container.offsetHeight || 200;
+    const headerWidth = container.offsetWidth || window.innerWidth;
+    for (let i = 0; i < cloudCount; i++) {
+        const cloud = document.createElement('div');
+        cloud.className = 'cloud-shape';
+        const size = 120 + Math.random() * 180; // 120-300px
+        cloud.style.width = `${size}px`;
+        cloud.style.height = `${size * (0.5 + Math.random() * 0.7)}px`;
+        cloud.style.left = `${Math.random() * (headerWidth - size)}px`;
+        cloud.style.top = `${Math.random() * (headerHeight * 0.7)}px`;
+        cloud.style.opacity = 0.10 + Math.random() * 0.18;
+        cloud.style.transform = `rotate(${Math.random() * 360}deg)`;
+        container.appendChild(cloud);
+    }
+}
+
 window.addEventListener('DOMContentLoaded', () => {
     createClock();
     createBubbles();
     animateBubbles();
+    createHeaderClouds();
 });
